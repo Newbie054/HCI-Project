@@ -1,6 +1,8 @@
+/* default page */
 *{
     margin: 0;
     padding: 0;
+    box-sizing:border-box;
 }
 
 .header{
@@ -13,14 +15,31 @@
 
 .logo{
     display: flex;
-    justify-content: flex-start;
+    padding: 10px;
     align-items: center;
     width: 60%;
 }
-
+.home:hover {
+    display: flex;
+    align-items: center;
+    background-color: #3e8e41;
+    height: 45px;
+}
+.about:hover {
+    display: flex;
+    align-items: center;
+    background-color: #3e8e41;
+    height: 45px;
+}
+.register:hover {
+    display: flex;
+    align-items: center;
+    background-color: #3e8e41;
+    height: 45px;
+}
 .header-content{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
     padding: 0 20px 0 0;
     color: white;
@@ -38,13 +57,11 @@
 
 /* Style The Dropdown Button */
 .dropbtn {
+    padding: 10px;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     background-color: #4CAF50;
     color: white;
-    padding: 0 20px 0 0;
-    font-size: 20px;
     border: none;
     cursor: pointer;
 }
@@ -53,15 +70,15 @@
 .dropdown {
     position: relative;
     display: inline-block;
+    background-color: black;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #4CAF50;
-    /* min-width: 160px; */
-    width: 100%;
+        padding: 0 20px 0 0;
+        background-color: #4CAF50;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -69,14 +86,13 @@
 /* Links inside the dropdown */
 .dropdown-content a {
     color: white;
-    padding: 16px;
-    text-decoration: none;
-    display: block;
+    padding: 10px;
+    width: 100%;
 }
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: #000000;
+    background-color:cadetblue;
 }
 
 /* Show the dropdown menu on hover */
@@ -87,4 +103,262 @@
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
+}
+
+/* home page */
+.men_slide{
+    
+    padding: 20px;
+    height: 500px;
+    width: auto;
+    background-image: url(../assets/men_bg.jpg);
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+.men_slide:hover{
+    opacity: 0.9;
+}
+
+/* register page */
+.intro_register:after {
+    content: '';
+    background: url(../assets/Header.jpg) center;
+    position: absolute; 
+    top:0px;
+    left: 0px;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    opacity: 0.3;
+}
+.intro_register {
+    position: relative;
+    padding: 50px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.form_register{
+    background-color: black;
+    color: white;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gender{
+    display: flex;
+    justify-content: space-between;
+}
+
+.all-product{
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-side{
+    width: 5%;
+}
+
+.right-side{
+    width: 95%;
+}
+
+.product-container{
+    box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+}
+
+.product-container:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.detail-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.responsive {
+    padding: 4px;
+    float: left;
+    width: 31%;
+}
+@media only screen and (max-width: 1200px) {
+    .left-side{
+        width: 2%;
+    }
+    .right-side{
+        width: 98%;
+    }
+    .responsive {
+        width: 48%;
+    }
+    .slideshow-container img{
+        max-width: 500px;
+        max-height: 300px;
+        position: relative;
+        margin: auto;
+    }
+    .next {
+        margin-right: 17%;
+        border-radius: 3px 0 0 3px;
+    }
+    .content-image img{
+        min-width: 20%;
+        min-height: 20%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .left-side{
+        width: 1%;
+    }
+    .right-side{
+        width: 99%;
+    }
+    .responsive {
+        width: 97%;
+    }
+    .slideshow-container img{
+        max-width: 400px;
+        max-height: 200px;
+        position: relative;
+        margin: auto;
+    }
+    .next {
+        margin-right: 42.5%;
+        border-radius: 3px 0 0 3px;
+    }
+    .image-size{
+        min-width: 20%;
+        min-height: 20%;
+    }
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 600px;
+    max-height: 400px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    max-width: 600px;
+    max-height: 400px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.footer{
+    display: flex;
+    background-color: #4CAF50;
+    justify-content: center;
+    position: static;
+    bottom: 0;
+    width: 100%;
+    /* center, flex-start, flex-end, space-evenly, space-between, space-around */
+}
+
+.socmed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-image{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    padding: 0 0 0 100px;
+}
+
+.image-size{
+    width: 100%;
+    height: 100%;
+}
+
+.about-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
